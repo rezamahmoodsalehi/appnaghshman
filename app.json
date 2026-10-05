@@ -1,0 +1,100 @@
+{
+  "expo": {
+    "name": "نقش من",
+    "slug": "naghshman",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/meydan-icon.png",
+    "backgroundColor": "#c03636",
+    "primaryColor": "#dc2626",
+    "scheme": "naghshman",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "icon": "./assets/images/meydan-icon.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#dc2626",
+        "foregroundImage": "./assets/images/meydan-icon-foreground.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "ir.naghshman.app",
+      "versionCode": 2,
+      "backgroundColor": "#c03636",
+      "userInterfaceStyle": "light"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/meydan-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "./plugins/with-launch-splash.cjs",
+      [
+        "expo-navigation-bar",
+        {
+          "hidden": true,
+          "enforceContrast": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#c03636",
+          "image": "./assets/images/native-floral-mark.png",
+          "imageWidth": 260,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "./plugins/with-android-release-properties.cjs",
+        {
+          "android": {
+            "buildArchs": [
+              "arm64-v8a"
+            ],
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "enableBundleCompression": true,
+            "useLegacyPackaging": true,
+            "gifEnabled": false,
+            "webpEnabled": false,
+            "webpAnimated": false,
+            "releasePaddingMiB": 24
+          }
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Yekan.ttf"
+          ]
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "color": "#dc2626",
+          "defaultChannel": "default"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e4788dfb-4695-40d8-bfa6-774aeae4e836"
+      }
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#c03636",
+      "barStyle": "light-content",
+      "translucent": false
+    }
+  }
+}
